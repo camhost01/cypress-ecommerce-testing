@@ -1,6 +1,7 @@
 import selector from '../utilities';
 import regelemet from '../elements/Register';
 import cartelement from '../elements/Cart';
+import checkoutElement from '../elements/Checkout';
 const data = require('../../fixtures/data.json');
 
 Cypress.Commands.add('fillForm', (username = 'testuser', email = 'test@example.com', password = 'Test1234') => {
@@ -29,6 +30,10 @@ Cypress.Commands.add('clickOnElement', (element) => {
     .click();
 });
 
+Cypress.Commands.add('waitElement', (element) => {
+  // Add the first product to the cart
+  selector.getByCssSelector(element).should('be.visible');
+});
 Cypress.Commands.add('logOnSite', (type = true) => {
   // Log in to the application
   switch (type) {
@@ -52,4 +57,30 @@ Cypress.Commands.add('logOnSite', (type = true) => {
   selector.getByCssSelector(regelemet.LOGIN)
     .should('be.visible')
     .click();
+});
+
+Cypress.Commands.add('addBuyerData', () => {
+  // Add the first product to the cart
+  selector.getByCssSelector(checkoutElement.NAME).should('be.visible')
+    .type(data.name);
+  selector.getByCssSelector(checkoutElement.LAST_NAME).should('be.visible')
+    .type(data.lastName);
+  selector.getByCssSelector(checkoutElement.EMAIL).should('be.visible')
+    .type(data.email);
+  selector.getByCssSelector(checkoutElement.ADDRESS).should('be.visible')
+    .type(data.address);
+  selector.getByCssSelector(checkoutElement.COUNTRY).should('be.visible')
+    .select(data.country);
+});
+
+Cypress.Commands.add('addCardData', () => {
+  // Add the first product to the cart
+  selector.getByCssSelector(checkoutElement.CARD_NAME).should('be.visible')
+    .type(data.name);
+  selector.getByCssSelector(checkoutElement.CARD_NUMBER).should('be.visible')
+    .type(data.creditCard);
+  selector.getByCssSelector(checkoutElement.EXPIRATION_DATE).should('be.visible')
+    .type(data.expirationDate);
+  selector.getByCssSelector(checkoutElement.CVV).should('be.visible')
+    .type(data.cvv);
 });

@@ -1,12 +1,9 @@
-import cartElement from '../support/elements/Cart';
-import selector from '../support/utilities';
-
-describe('Carrito de compras', () => {
+describe('Shoping cart', () => {
   beforeEach(() => {
     cy.visit('/');
   });
 
-  it('Agregar un producto al carrito', () => {
+  it('Save a product in the cart', () => {
     cy.addFirstProduct();
     cy.openCart();
   });
