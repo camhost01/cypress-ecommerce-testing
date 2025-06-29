@@ -1,0 +1,17 @@
+{
+  "name": "cypress-ecommerce",
+  "version": "1.0.0",
+  "description": "E-commerce testing with Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "cyopen": "cypress open",
+    "registerTC": "cypress run --spec 'cypress/e2e/register.cy.js'",
+    "cartTC": "cypress run --spec 'cypress/e2e/cart.cy.js'",
+    "checkoutTC": "cypress run --spec 'cypress/e2e/chekout.cy.js'"
+  },
+  "author": "Camilo Ramos",
+  "devDependencies": {
+    "cypress": "^14.5.0"
+  }
+}
