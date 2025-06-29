@@ -1,6 +1,11 @@
 {
   "name": "Custom Name",
-  "email": "myecomercetestclear@yopmail.com",
-  "password": "test1234",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "lastName": "Custom Last Name",
+  "email": "huge.test@gmail.com",
+  "address": "123 Custom St",
+  "password": "Huge2025.",
+  "country": "Colombia",
+  "creditCard": "4301822375925071",
+  "expirationDate": "2029-09",
+  "cvv": "668"
 }

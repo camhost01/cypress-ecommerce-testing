@@ -6,9 +6,9 @@
   "scripts": {
     "test": "cypress run",
     "cyopen": "cypress open",
-    "registerTC": "cypress run --spec 'cypress/e2e/register.cy.js'",
-    "cartTC": "cypress run --spec 'cypress/e2e/cart.cy.js'",
-    "checkoutTC": "cypress run --spec 'cypress/e2e/chekout.cy.js'"
+    "registerTC": "cypress run --browser chrome --spec 'cypress/e2e/register.cy.js'",
+    "cartTC": "cypress run --browser chrome --spec 'cypress/e2e/cart.cy.js'",
+    "checkoutTC": "cypress run --browser chrome --spec 'cypress/e2e/chekout.cy.js'"
   },
   "author": "Camilo Ramos",
   "devDependencies": {

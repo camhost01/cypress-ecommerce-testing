@@ -3,7 +3,7 @@ const { defineConfig } = require('cypress');
 module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://www.laboratoriodetesting.com',
-    video: false,
+    video: true,
     setupNodeEvents(on, config) {
       // Puedes configurar plugins aquí si es necesario
     },
